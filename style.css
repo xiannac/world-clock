@@ -1,0 +1,13 @@
+html {
+  background: url("images/map.webp") no-repeat center center fixed;
+  background-size: cover;
+  background-color: #ccad88;
+}
+h1 {
+  text-align: center;
+  color: #382823;
+}
+footer {
+  text-align: center;
+  color: aliceblue;
+}
