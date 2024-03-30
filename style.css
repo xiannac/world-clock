@@ -6,7 +6,8 @@ html {
 }
 h1 {
   text-align: center;
-  color: #382823;
+  color: #47352f;
+  font-size: 33px;
 }
 select {
   display: block;
