@@ -51,7 +51,7 @@ h2 {
   border-bottom: 1px dashed #be9155;
 }
 .time {
-  font-size: 53px;
+  font-size: 52px;
   color: #5a442a;
 }
 .date {
@@ -60,4 +60,10 @@ h2 {
 }
 .city:last-child {
   border: none;
+}
+a {
+  color: rgb(102, 51, 51);
+}
+a:hover {
+  color: rgb(232, 126, 40);
 }
