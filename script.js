@@ -23,10 +23,25 @@ function updateTime() {
     let moscowTime = moment().tz("Europe/Moscow").format("h:mm:ss a");
     moscowTimeElement.innerHTML = moscowTime;
   }
+  //rome
+  let romeElement = document.querySelector("#rome");
+  if (romeElement) {
+    let romeDateElement = romeElement.querySelector(".date");
+
+    let romeDate = moment().tz("Europe/Rome").format(" dddd, MMMM D ");
+    romeDateElement.innerHTML = romeDate;
+
+    let romeTimeElement = romeElement.querySelector(".time");
+    let romeTime = moment().tz("Europe/Rome").format("h:mm:ss a");
+    romeTimeElement.innerHTML = romeTime;
+  }
 }
 
 function updateCity(event) {
   let cityTimezone = event.target.value;
+  if (cityTimezone === "current") {
+    cityTimezone = moment.tz.guess();
+  }
   let cityName = cityTimezone.replace("_", " ").split("/")[1];
   let cityTime = moment().tz(cityTimezone);
   let citiesElement = document.querySelector("#cities");
@@ -40,11 +55,11 @@ function updateCity(event) {
       <div class="time">${cityTime.format("h:mm:ss a")}</div>
     </div>`;
 }
-let citiesSelectElement = document.querySelector("#city");
-
-citiesSelectElement.addEventListener("change", updateCity);
 
 updateTime();
-
 setInterval(updateTime, 1000);
+
+let citiesSelectElement = document.querySelector("#city");
+citiesSelectElement.addEventListener("change", updateCity);
+
 setInterval(updateCity, 1000);
