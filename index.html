@@ -21,35 +21,39 @@
     <div class="container">
       <h1>World Clock</h1>
 
-      <select>
+      <select id="city">
         <option value="">Select a city</option>
-        <option value="tokyo">Tokyo</option>
-        <option value="new york">New york</option>
-        <option value="russia">Russia</option>
+        <option value="Asia/Shanghai">Shanghai</option>
+        <option value="America/New_York">New york</option>
+        <option value="Europe/Rome">Rome</option>
+        <option value="Asia/Tokyo">Tokyo</option>
+        <option value="Europe/Moscow">Moscow</option>
       </select>
 
-      <div class="city" id="tokyo">
-        <div>
-          <h2>Tokyo</h2>
-          <div class="date">March 30 2024</div>
+      <div id="cities">
+        <div class="city" id="tokyo">
+          <div>
+            <h2>Tokyo</h2>
+            <div class="date"></div>
+          </div>
+          <div class="time"></div>
         </div>
-        <dive class="time">5:58pm</dive>
-      </div>
 
-      <div class="city" id="moscow">
-        <div>
-          <h2>Moscow</h2>
-          <div class="date">March 30 2024</div>
+        <div class="city" id="moscow">
+          <div>
+            <h2>Moscow</h2>
+            <div class="date"></div>
+          </div>
+          <div class="time"></div>
         </div>
-        <dive class="time">5:58pm</dive>
       </div>
     </div>
     <footer>
       Coded by
       <strong> Xianna Colon-Griffiths</strong>
-      open sourced on
+
       <a href="https://github.com/xiannac/world-clock/tree/main" target="_blank"
-        >Github
+        >open sourced on Github
       </a>
     </footer>
     <script src="script.js"></script>
