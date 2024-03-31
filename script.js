@@ -8,7 +8,9 @@ function updateTime() {
     tokyoDateElement.innerHTML = tokyoDate;
 
     let tokyoTimeElement = tokyoElement.querySelector(".time");
-    let tokyoTime = moment().tz("Asia/Tokyo").format("h:mm:ss a");
+    let tokyoTime = moment()
+      .tz("Asia/Tokyo")
+      .format("h:mm:ss [<small>]a[<small>]");
     tokyoTimeElement.innerHTML = tokyoTime;
   }
   //russia
@@ -20,7 +22,9 @@ function updateTime() {
     moscowDateElement.innerHTML = moscowDate;
 
     let moscowTimeElement = moscowElement.querySelector(".time");
-    let moscowTime = moment().tz("Europe/Moscow").format("h:mm:ss a");
+    let moscowTime = moment()
+      .tz("Europe/Moscow")
+      .format("h:mm:ss[<small>]a[<small>] ");
     moscowTimeElement.innerHTML = moscowTime;
   }
   //rome
@@ -32,7 +36,9 @@ function updateTime() {
     romeDateElement.innerHTML = romeDate;
 
     let romeTimeElement = romeElement.querySelector(".time");
-    let romeTime = moment().tz("Europe/Rome").format("h:mm:ss a");
+    let romeTime = moment()
+      .tz("Europe/Rome")
+      .format("h:mm:ss [<small>]a[<small>]");
     romeTimeElement.innerHTML = romeTime;
   }
 }
@@ -52,7 +58,10 @@ function updateCity(event) {
         <h2>${cityName}</h2>
         <div class="date">${cityTime.format(" dddd, MMMM D ")}</div>
       </div>
-      <div class="time">${cityTime.format("h:mm:ss a")}</div>
+      <div class="time">${cityTime.format("h:mm:ss")}<small>${cityTime.format(
+    "a"
+  )}</small>
+  </div>
     </div>`;
 }
 
