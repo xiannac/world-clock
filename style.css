@@ -29,7 +29,7 @@ select {
 }
 footer {
   text-align: center;
-  color: #81623c;
+  color: #765a38;
 }
 h2 {
   margin: 0 0 2px;
@@ -66,4 +66,10 @@ a {
 }
 a:hover {
   color: rgb(232, 126, 40);
+}
+
+.back {
+  text-align: center;
+  display: block;
+  text-decoration: none;
 }
