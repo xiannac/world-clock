@@ -10,7 +10,7 @@ function updateTime() {
     let tokyoTimeElement = tokyoElement.querySelector(".time");
     let tokyoTime = moment()
       .tz("Asia/Tokyo")
-      .format("h:mm:ss [<small>]a[<small>]");
+      .format("h:mm:ss[<small>]a[<small>]");
     tokyoTimeElement.innerHTML = tokyoTime;
   }
   //russia
@@ -38,7 +38,7 @@ function updateTime() {
     let romeTimeElement = romeElement.querySelector(".time");
     let romeTime = moment()
       .tz("Europe/Rome")
-      .format("h:mm:ss [<small>]a[<small>]");
+      .format("h:mm:ss[<small>]a[<small>]");
     romeTimeElement.innerHTML = romeTime;
   }
 }
